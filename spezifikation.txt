@@ -1,0 +1,57 @@
+--- Wichtige Hinweise zur Bearbeitung
+Bearbeitung im Team mit maximal 3 Studierenden.
+Abgabe des vollständigen Projekts [matrikelnummern].7z bis spätestens 24.05.2024 17:30 Uhr.
+Im Interesse einer wertschöpfenden Präsentation und eines optimalen Lernerfolgs
+wird eine qualitativ sehr gute Implementierung erwartet und ist sicherzustellen.
+
+--- Spezifikation
+
+[Bottle]
+name             : Lab Gin 2008
+content          : 500 (ml) -> 1 ml = 1 Zeichen g
+mouthPiece       : CARNETTE
+height           : 164,5 (mm)
+diameter         : 86 (mm)
+marginalCapacity : 545 (ml)
+weight           : 400 (gr)
+isFilled         : true | false
+serialNumber     : 10-stellige ganze Zahl (zufällig)
+-> Bitte wählen Sie geeignete Datentypen aus.
+
+[Identity]
+Zwei Bottle mit der gleichen serialNumber sind gleich.
+
+[Box]
+storageArea | 3x3 (array) = 9 Bottle
+
+[Track]
+zwei Tracks realisiert als Queue
+- Bottle : initialisiert mit 27 leeren Bottle
+- Box    : initialisiert mit 3 leeren Box
+
+[StorageArea]
+realisiert als Stack mit korrektem Verhalten
+
+[Tank]
+content : 13.500 Zeichen g (Länge: 20, Breite: 25, Höhe: 27)
+
+[FillingMachine]
+- kann ein-/ausgeschaltet werden
+- befüllt sukzessive Flaschen mit Zeichen g
+- steuert den Roboter 01 für die Entnahme von befüllten Flaschen 
+
+[Roboter 01]
+- kann ein-/ausgeschaltet werden
+- entnimmt befüllte Flasche und lege in die zu befüllende Box in der StorageArea
+- steuert Roboter 02 für die Bereitstellung von zu befüllenden Boxen
+
+[Roboter 02]
+- kann ein-/ausgeschaltet werden
+- stellt leere Box für Befüllung bereit
+- verwaltet die StorageArea
+
+-> Für FillingMachine und Roboter sind geeignete Attribute,
+   Methoden und Schnittstellen zu definieren
+
+Test Management
+Die korrekte Funktionsweise von FillingMachine und Roboter ist mit geeigneten Tests zu prüfen.
