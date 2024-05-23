@@ -7,8 +7,9 @@ public class Bottle {
     private final int marginalCapacity;
     private final String weight;
     private boolean isFilled;
+    private long serialNumber;
 
-    public Bottle(String name) {
+    public Bottle(String name, long serialNumber) {
         this.name = name;
         content = 0;
         this.mouthPiece = MouthPiece.CARNETTE;
@@ -17,5 +18,6 @@ public class Bottle {
         marginalCapacity = Configuration.INSTANCE.marginalCapacity;
         weight = Configuration.INSTANCE.weight;
         isFilled = false;
+        this.serialNumber = serialNumber;
     }
 }
