@@ -44,8 +44,10 @@ public class Application {
         // Filling Machine
         FillingMachine fillingMachine = new FillingMachine(bottleTrack, tank, fillingRobot);
 
-        fillingMachine.activate();
-        fillingMachine.fillingBottle();
-        fillingMachine.deactivate();
+        // GinFillingMachine
+        GinFillingMachine ginFillingMachine = new GinFillingMachine(fillingMachine);
+        ginFillingMachine.activate();
+        ginFillingMachine.fillingBottle();
+        ginFillingMachine.deactivate();
     }
 }
