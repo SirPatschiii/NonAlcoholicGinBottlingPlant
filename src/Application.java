@@ -21,5 +21,12 @@ public class Application {
         for (Box box : boxes) {
             boxTrack.setBox(box);
         }
+
+        // BottleTrack
+        BottleTrack bottleTrack = new BottleTrack();
+
+        for (Bottle bottle : bottles) {
+            bottleTrack.setBottle(bottle);
+        }
     }
 }
