@@ -28,5 +28,24 @@ public class Application {
         for (Bottle bottle : bottles) {
             bottleTrack.setBottle(bottle);
         }
+
+        // Storage Area
+        StorageArea storageArea = new StorageArea();
+
+        // Tank
+        Tank tank = new Tank(20, 25, 27);
+
+        // Storage Robot
+        StorageRobot storageRobot = new StorageRobot(boxTrack, storageArea);
+
+        // Filling Robot
+        FillingRobot fillingRobot = new FillingRobot(storageArea, storageRobot);
+
+        // Filling Machine
+        FillingMachine fillingMachine = new FillingMachine(bottleTrack, tank, fillingRobot);
+
+        fillingMachine.activate();
+        fillingMachine.fillingBottle();
+        fillingMachine.deactivate();
     }
 }

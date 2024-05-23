@@ -29,4 +29,12 @@ public class FillingMachine {
             fillingRobot.deactivate();
         }
     }
+
+    public void activate() {
+        isActivated = true;
+    }
+
+    public void deactivate() {
+        isActivated = false;
+    }
 }

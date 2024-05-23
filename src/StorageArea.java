@@ -1,25 +1,21 @@
+import java.util.ArrayList;
+
 public class StorageArea {
-    private Box[] storage;
-    private final int capacity = 3;
-    private int top;
+    private ArrayList<Box> storage;
 
     public StorageArea() {
-        storage = new Box[capacity];
-    }
-
-    public boolean isFull() {
-        return top == capacity - 1;
+        storage = new ArrayList<>();
     }
 
     public void addBox(Box box) {
-        if (!isFull()) {
-            storage[++top] = box;
-        } else {
-            throw new IndexOutOfBoundsException("Storage area already full!");
-        }
+        storage.addLast(box);
     }
 
     public Box getBox() {
-        return storage[top];
+        try {
+            return storage.getLast();
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
