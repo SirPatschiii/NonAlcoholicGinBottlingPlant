@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BottleTrack {
-    private Queue<Bottle> bottles;
+    private final Queue<Bottle> bottles;
 
     public BottleTrack() {
         bottles = new LinkedList<>();

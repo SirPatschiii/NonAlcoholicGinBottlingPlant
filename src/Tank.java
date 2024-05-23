@@ -14,9 +14,6 @@ public class Tank {
     }
 
     public boolean isEmpty() {
-        if (content <= 0) {
-            return true;
-        }
-        return false;
+        return content <= 0;
     }
 }

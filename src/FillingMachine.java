@@ -4,7 +4,6 @@ public class FillingMachine {
     private final FillingRobot fillingRobot;
 
     private boolean isActivated;
-    private Bottle bottleToBeFilled;
 
     public FillingMachine(BottleTrack bottleTrack, Tank tank, FillingRobot fillingRobot) {
         this.bottleTrack = bottleTrack;
@@ -15,6 +14,7 @@ public class FillingMachine {
     }
 
     public void fillingBottle() {
+        Bottle bottleToBeFilled;
         while (isActivated && !(tank.isEmpty())) {
             bottleToBeFilled = bottleTrack.getBottle();
 
@@ -25,7 +25,6 @@ public class FillingMachine {
 
             fillingRobot.activate();
             fillingRobot.storeBottle(bottleToBeFilled);
-            bottleToBeFilled = null;
             fillingRobot.deactivate();
         }
     }

@@ -7,7 +7,7 @@ public class Bottle {
     private final int marginalCapacity;
     private final String weight;
     private boolean isFilled;
-    private long serialNumber;
+    private final long serialNumber;
 
     public Bottle(String name, long serialNumber) {
         this.name = name;

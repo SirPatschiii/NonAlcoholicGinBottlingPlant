@@ -1,7 +1,7 @@
 public interface IGinFillingMachine {
-    public void activate();
+    void activate();
 
-    public void deactivate();
+    void deactivate();
 
-    public void fillingBottle();
+    void fillingBottle();
 }

@@ -1,12 +1,8 @@
 public class Box {
-    private Bottle[][] storageArea;
+    private final Bottle[][] storageArea;
 
     public Box() {
         storageArea = new Bottle[3][3];
-    }
-
-    public Bottle[][] getStorageArea() {
-        return storageArea;
     }
 
     public boolean isFull() {

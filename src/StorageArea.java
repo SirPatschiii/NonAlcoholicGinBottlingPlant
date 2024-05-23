@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class StorageArea {
-    private ArrayList<Box> storage;
+    private final ArrayList<Box> storage;
 
     public StorageArea() {
         storage = new ArrayList<>();

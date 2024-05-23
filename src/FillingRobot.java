@@ -20,22 +20,26 @@ public class FillingRobot {
     }
 
     public void storeBottle(Bottle bottle) {
-        if ((storageArea.getBox() != null)) {
-            if (!(storageArea.getBox().isFull())) {
-                storageArea.getBox().add(bottle);
+        if (isActivated) {
+            if ((storageArea.getBox() != null)) {
+                if (!(storageArea.getBox().isFull())) {
+                    storageArea.getBox().add(bottle);
+                } else {
+                    commandNewBox();
+                    storageArea.getBox().add(bottle);
+                }
             } else {
                 commandNewBox();
                 storageArea.getBox().add(bottle);
             }
-        } else {
-            commandNewBox();
-            storageArea.getBox().add(bottle);
         }
     }
 
     public void commandNewBox() {
-        storageRobot.activate();
-        storageRobot.deliverNewBox();
-        storageRobot.deactivate();
+        if (isActivated) {
+            storageRobot.activate();
+            storageRobot.deliverNewBox();
+            storageRobot.deactivate();
+        }
     }
 }

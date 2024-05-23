@@ -1,8 +1,7 @@
 import java.util.Random;
 
 public class Identity {
-    private long serialNumber;
-    private long[] serialNumbers;
+    private final long[] serialNumbers;
     private int c;
 
     public Identity() {
@@ -12,12 +11,13 @@ public class Identity {
 
     private long generateSerialNumber() {
         Random random = new Random();
+        long serialNumber;
 
         long min = 1_000_000_000L;
         long max = 9_999_999_999L;
 
         do {
-            serialNumber = min + (long)(random.nextDouble() * (max - min + 1));
+            serialNumber = min + (long) (random.nextDouble() * (max - min + 1));
         } while (checkIfSerialNumberAlreadyExists(serialNumber));
 
         serialNumbers[c] = serialNumber;

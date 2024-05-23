@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BoxTrack {
-    private Queue<Box> boxTrack;
+    private final Queue<Box> boxTrack;
 
     public BoxTrack() {
         boxTrack = new LinkedList<>();
