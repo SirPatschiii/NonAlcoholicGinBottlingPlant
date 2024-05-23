@@ -11,4 +11,12 @@ public class BoxTrack extends Track{
     public void setBox(Box box) {
         boxTrack.add(box);
     }
+
+    public Box getBox() {
+        if (boxTrack.isEmpty()) {
+            throw new RuntimeException("No box left!");
+        }
+
+        return boxTrack.poll();
+    }
 }

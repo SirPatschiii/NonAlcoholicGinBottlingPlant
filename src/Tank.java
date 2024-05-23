@@ -5,7 +5,18 @@ public class Tank {
         content = length * width * height;
     }
 
-    public void decreaseContent(int amount) {
-        content = content - amount;
+    public void decreaseContent() {
+        if (content < 0) {
+            throw new RuntimeException("No content left!");
+        }
+
+        content--;
+    }
+
+    public boolean isEmpty() {
+        if (content <= 0) {
+            return true;
+        }
+        return false;
     }
 }

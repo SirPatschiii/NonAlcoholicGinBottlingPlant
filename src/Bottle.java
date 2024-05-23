@@ -20,4 +20,18 @@ public class Bottle {
         isFilled = false;
         this.serialNumber = serialNumber;
     }
+
+    public void increaseContent() {
+        content++;
+    }
+
+    public void setIsFilled() {
+        isFilled = content >= 500;
+    }
+
+    public boolean isFilled() {
+        setIsFilled();
+
+        return isFilled;
+    }
 }
