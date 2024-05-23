@@ -1,27 +1,32 @@
-import org.mockito.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
+import java.util.List;
+import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ParamTest {
 
-        Bottle bottle = new Bottle(name, serialNumber);
-
-
-        @BeforeEach
-        void setup() {
-        }
+        FillingMachine fillingMachine = mock(FillingMachine.class);
 
         @Test
         public void TestIncreaseContent() {
-                void content = bottle.increaseContent();
-                assertNotNull(content);
+                // fillingMachine.fillingBottle();
+                doNothing().when(fillingMachine).fillingBottle();
+                // verify(fillingMachine).fillingBottle();
 
         }
 
-        @Test
+
         public void TestDeactivate() {
 
         }
-        @Test
+
         public void TestFillingBottle() {
 
         }
