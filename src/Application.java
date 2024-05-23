@@ -7,5 +7,19 @@ public class Application {
         for (int i = 0; i < 27; i++) {
             bottles[i] = new Bottle("Lab Gin 2008", identity.getSerialNumber());
         }
+
+        // Box
+        Box[] boxes = new Box[3];
+
+        for (int i = 0; i < 3; i++) {
+            boxes[i] = new Box();
+        }
+
+        // BoxTrack
+        BoxTrack boxTrack = new BoxTrack();
+
+        for (Box box : boxes) {
+            boxTrack.setBox(box);
+        }
     }
 }

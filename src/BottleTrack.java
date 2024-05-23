@@ -1,2 +1,3 @@
-public class BottleTrack {
+public class BottleTrack extends Track{
+
 }

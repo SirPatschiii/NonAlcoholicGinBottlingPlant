@@ -1,2 +1,3 @@
-public class Track {
+public abstract class Track {
+
 }
