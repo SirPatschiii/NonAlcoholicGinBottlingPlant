@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BoxTrack extends Track{
+public class BoxTrack {
     private Queue<Box> boxTrack;
 
     public BoxTrack() {

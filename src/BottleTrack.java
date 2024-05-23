@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BottleTrack extends Track{
+public class BottleTrack {
     private Queue<Bottle> bottles;
 
     public BottleTrack() {
